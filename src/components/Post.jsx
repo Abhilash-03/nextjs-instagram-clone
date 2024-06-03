@@ -1,4 +1,5 @@
 import { HiOutlineDotsVertical } from 'react-icons/hi'
+import LikeSection from './LikeSection'
 
 const Post = ({post}) => {
   return (
@@ -17,7 +18,7 @@ const Post = ({post}) => {
         alt={post.caption}
         className='object-cover w-full'
       />
-      {/* <LikeSection id={post.id} /> */}
+      <LikeSection id={post.id} />
       <p className='p-5 truncate'>
         <span className='font-bold mr-2 text-gray-700'>@{post.username}</span>
         <span className='font-serif font-semibold'>{post.caption}</span>
