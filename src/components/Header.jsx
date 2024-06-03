@@ -146,6 +146,12 @@ const Header = () => {
                <input type="text" placeholder='Please enter your caption...' maxLength='150' className='m-4 border-none text-center 
                w-full focus:ring-0 outline-none' onChange={(e) => setCaption(e.target.value)} />
                 <button
+                   disabled={
+                    !selectedFile ||
+                    caption.trim() === '' ||
+                    postUploading ||
+                    imageFileUploading
+                  }
                 onClick={handleSubmit}
             className='w-full bg-red-600 text-white p-2 shadow-md rounded-lg hover:brightness-105 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:hover:brightness-100 disabled:text-black'
           >
