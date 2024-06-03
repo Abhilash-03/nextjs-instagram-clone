@@ -1,5 +1,6 @@
 import { HiOutlineDotsVertical } from 'react-icons/hi'
 import LikeSection from './LikeSection'
+import CommentSection from './CommentSection'
 
 const Post = ({post}) => {
   return (
@@ -23,7 +24,7 @@ const Post = ({post}) => {
         <span className='font-bold mr-2 text-gray-700'>@{post.username}</span>
         <span className='font-serif font-semibold'>{post.caption}</span>
       </p>
-      {/* <CommentSection id={post.id} /> */}
+      <CommentSection id={post.id} />
     </div>
   )
 }
