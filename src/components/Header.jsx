@@ -30,7 +30,7 @@ const Header = () => {
       console.log(imageFileUrl);
     }
   }
-  console.log(session);
+  // console.log(session);
   const uplaodImageToStorage = async() => {
     setImageFileUploading(true);
    const storage = getStorage(app);
