@@ -6,7 +6,7 @@ const MiniProfile = () => {
   const { data: session } = useSession();
 
   return (
-    <div className='flex items-center justify-between mt-14 ml-10 w-full'>
+    <div className='flex flex-col xl:flex-row lg:items-center lg:justify-between mt-14 ml-10 w-full bg-gray-200 px-3 py-4 rounded-2xl shadow-lg border'>
       <img
         src={session?.user?.image || '/800px-Instagram_logo_2016.webp'}
         alt='profile image'
@@ -19,14 +19,14 @@ const MiniProfile = () => {
       {session ? (
         <button
           onClick={signOut}
-          className='text-blue-500 text-sm font-semibold'
+          className='text-blue-500 text-sm font-semibold text-left ml-5'
         >
           Sign Out
         </button>
       ) : (
         <button
           onClick={signIn}
-          className='text-blue-500 text-sm font-semibold'
+          className='text-blue-500 text-sm font-semibold text-left ml-5'
         >
           Sign In
         </button>
