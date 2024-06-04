@@ -16,7 +16,8 @@ import GoogleProvider from "next-auth/providers/google"
       session.user.uid = token.sub;
       return session;
     }
-  }
+  },
+  secret: process.env.NEXTAUTH_SECRET
 });
 
 export {handler as GET, handler as POST};
