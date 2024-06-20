@@ -7,10 +7,10 @@ const Posts = async() => {
   const q = query(collection(db, 'posts'), orderBy('timeStamp', 'desc'));
   const querySnapshot = await getDocs(q);
   let data = [];
-
   querySnapshot.forEach((doc) => {
     data.push({id: doc.id, ...doc.data()});
-  })
+  });
+  
   return (
     <div>
       {data.map(post => (

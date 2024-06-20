@@ -10,6 +10,8 @@ export const metadata = {
   description: "A instagram clone built using Next.js and Tailwind CSS.",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default function RootLayout({ children }) {
   return (
     <SessionWrapper>
