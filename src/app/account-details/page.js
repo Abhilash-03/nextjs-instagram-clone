@@ -1,7 +1,7 @@
 'use client';
 import { useSession } from 'next-auth/react'
 
-const page = () => {
+const AccountDetails = () => {
     const {data: session} = useSession();
   return (
     <div className='flex flex-col justify-center items-center bg-gray-800  max-w-3xl mx-auto my-5 rounded-lg py-5 px-6 shadow-2xl shadow-black'>
@@ -32,4 +32,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AccountDetails
