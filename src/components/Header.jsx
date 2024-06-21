@@ -68,6 +68,7 @@ const Header = () => {
   const handleSubmit = async() => {
       setPostUploading(true);
       const docRef = await addDoc(collection(db, 'posts'), {
+        uid: session.user.uid,
         username: session.user.username,
         caption,
         profileImg: session.user.image,
@@ -116,8 +117,9 @@ const Header = () => {
               className='text-2xl cursor-pointer tranform hover:scale-125 transition duration-300 hover:text-red-600'
               onClick={() => setIsOpen(true)}
             />
-             <img src={session.user.image} alt={session.user.name} width={40} height={40} className='h-10 w-10 rounded-full cursor-pointer'  onClick={signOut}/>
-
+            <Link href={'/account-details'}>
+             <img src={session.user.image} alt={session.user.name} width={40} height={40} className='h-10 w-10 rounded-full cursor-pointer' />
+             </Link>
              </div>
           ) : (
             <button
