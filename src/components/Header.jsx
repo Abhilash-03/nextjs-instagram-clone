@@ -126,7 +126,7 @@ const Header = () => {
             onClick={signIn}
                className='text-sm font-semibold text-blue-500'
              >
-               Log In
+               Signin
              </button>
           )
          }
